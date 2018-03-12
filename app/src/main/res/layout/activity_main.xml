@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDividerColor"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/colorPrimaryText">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/dp_10"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout style="@style/levels_linearLayout_style">
+
+                    <TextView
+                        android:id="@+id/welcome_txt"
+                        style="@style/welcome_and_quiz_style"
+                        android:text="@string/welcome" />
+
+                    <ImageView
+                        android:id="@+id/bienvenue_img"
+                        style="@style/images_style"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/bienvenue" />
+
+                    <TextView
+                        android:id="@+id/quiz_txt"
+                        style="@style/welcome_and_quiz_style"
+                        android:text="@string/quiz" />
+
+                    <EditText
+                        android:id="@+id/enter_your_name_edtxt"
+                        style="@style/enter_your_name_style"
+                        android:hint="@string/name" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/dp_10"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout style="@style/levels_linearLayout_style">
+
+                    <TextView
+                        android:id="@+id/basic_level_txt"
+                        style="@style/levels_textView_style"
+                        android:text="@string/Basic" />
+
+                    <ImageView
+                        android:id="@+id/basic_img"
+                        style="@style/images_style"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/basic" />
+
+                    <TextView
+                        android:id="@+id/check_w_answer_txt"
+                        style="@style/check_right_answers"
+                        android:text="@string/check_right_answers" />
+
+                    <LinearLayout style="@style/questions_answers_linearLayout_style">
+
+                        <TextView
+                            android:id="@+id/Q1_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q1" />
+
+                        <CheckBox
+                            android:id="@+id/Q1_cb1"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q1A1" />
+
+                        <CheckBox
+                            android:id="@+id/Q1_cb2"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q1A2" />
+
+                        <CheckBox
+                            android:id="@+id/Q1_cb3"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q1A3" />
+
+                        <CheckBox
+                            android:id="@+id/Q1_cb4"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q1A4" />
+
+                        <TextView
+                            android:id="@+id/Q2_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q2" />
+
+                        <CheckBox
+                            android:id="@+id/Q2_cb1"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q2A1" />
+
+                        <CheckBox
+                            android:id="@+id/Q2_cb2"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q2A2" />
+
+                        <CheckBox
+                            android:id="@+id/Q2_cb3"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q2A3" />
+
+                        <CheckBox
+                            android:id="@+id/Q2_cb4"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q2A4" />
+
+                        <TextView
+                            android:id="@+id/Q3_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q3" />
+
+                        <CheckBox
+                            android:id="@+id/Q3_cb1"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q3A1" />
+
+                        <CheckBox
+                            android:id="@+id/Q3_cb2"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q3A2" />
+
+                        <CheckBox
+                            android:id="@+id/Q3_cb3"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q3A3" />
+
+                        <CheckBox
+                            android:id="@+id/Q3_cb4"
+                            style="@style/basic_answers_checkBoxes_style"
+                            android:text="@string/Q3A4" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/dp_10"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout style="@style/levels_linearLayout_style">
+
+                    <TextView
+                        android:id="@+id/intermediate_level_txt"
+                        style="@style/levels_textView_style"
+                        android:text="@string/Intermediate" />
+
+                    <ImageView
+                        android:id="@+id/intermediate_level_img"
+                        style="@style/images_style"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/intermediate" />
+
+                    <TextView
+                        android:id="@+id/choose_one_wright_answer_txt"
+                        style="@style/check_right_answers"
+                        android:text="@string/choose_one" />
+
+                    <LinearLayout style="@style/questions_answers_linearLayout_style">
+
+                        <TextView
+                            android:id="@+id/Q4_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q4" />
+
+                        <RadioGroup
+                            android:id="@+id/Q4_rg"
+                            style="@style/radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/Q4_rb1"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q4A1" />
+
+                            <RadioButton
+                                android:id="@+id/Q4_rb_2"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q4A2" />
+
+                            <RadioButton
+                                android:id="@+id/Q4_rb3"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q4A3" />
+
+                            <RadioButton
+                                android:id="@+id/Q4_rb4"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q4A4" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/Q5_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q5" />
+
+                        <RadioGroup
+                            android:id="@+id/Q5_rg"
+                            style="@style/radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/Q5_rb1"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q5A1" />
+
+                            <RadioButton
+                                android:id="@+id/Q5_rb2"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q5A2" />
+
+                            <RadioButton
+                                android:id="@+id/Q5_rb3"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q5A3" />
+
+                            <RadioButton
+                                android:id="@+id/Q5_rb4"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q5A4" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/Q6_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q6" />
+
+                        <RadioGroup
+                            android:id="@+id/Q6_rg"
+                            style="@style/radio_group_style">
+
+                            <RadioButton
+                                android:id="@+id/Q6_rb1"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q6A1" />
+
+                            <RadioButton
+                                android:id="@+id/Q6_rb2"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q6A2" />
+
+                            <RadioButton
+                                android:id="@+id/Q6_rb3"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q6A3" />
+
+                            <RadioButton
+                                android:id="@+id/Q6_rb4"
+                                style="@style/radio_button_style"
+                                android:text="@string/Q6A4" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/dp_10"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout style="@style/levels_linearLayout_style">
+
+                    <TextView
+                        android:id="@+id/advanced_level_txt"
+                        style="@style/levels_textView_style"
+                        android:text="@string/Advanced" />
+
+                    <ImageView
+                        android:id="@+id/advanced_level_img"
+                        style="@style/images_style"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/advanced" />
+
+                    <TextView
+                        android:id="@+id/type_your_answer_txt"
+                        style="@style/check_right_answers"
+                        android:text="@string/type_in" />
+
+                    <LinearLayout style="@style/questions_answers_linearLayout_style">
+
+                        <TextView
+                            android:id="@+id/Q7_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q7" />
+
+                        <EditText
+                            android:id="@+id/Q7_edtxt"
+                            style="@style/editText_advanced_style"
+                            android:hint="@string/Q7_8_9_10A" />
+
+                        <TextView
+                            android:id="@+id/Q8_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q8" />
+
+                        <EditText
+                            android:id="@+id/Q8_edtxt"
+                            style="@style/editText_advanced_style"
+                            android:hint="@string/Q7_8_9_10A" />
+
+                        <TextView
+                            android:id="@+id/Q9_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q9" />
+
+                        <EditText
+                            android:id="@+id/Q9_edtxt"
+                            style="@style/editText_advanced_style"
+                            android:hint="@string/Q7_8_9_10A" />
+
+                        <TextView
+                            android:id="@+id/Q10_txt"
+                            style="@style/questions_textView_style"
+                            android:text="@string/Q10" />
+
+                        <EditText
+                            android:id="@+id/Q10_edtxt"
+                            style="@style/editText_advanced_style"
+                            android:hint="@string/Q7_8_9_10A" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/button_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@drawable/button_style"
+                android:minHeight="@dimen/dp_48"
+                android:minWidth="@dimen/dp_48"
+                android:onClick="SubmitButton"
+                android:padding="@dimen/dp_10"
+                android:text="@string/button_submit" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
